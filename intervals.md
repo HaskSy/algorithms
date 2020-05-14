@@ -69,6 +69,8 @@ https://leetcode.com/problems/non-overlapping-intervals
 
 
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+        if intervals == []:
+            return 0
         intervals.sort(key=lambda interval: interval[-1])
         count = len(intervals) - 1
         prev_result = intervals[0][-1]
