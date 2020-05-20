@@ -33,6 +33,13 @@ https://leetcode.com/problems/palindrome-linked-list/
 
 '''python
 
+    def isPalindrome(self, head: ListNode) -> bool:
+        xs = []
+        while head:
+            xs.append(head.val)
+            head = head.next
+        return xs == xs[::-1]
+        
 '''
 
 ## Merge two Sorted Lists
