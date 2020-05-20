@@ -72,28 +72,27 @@ https://leetcode.com/problems/linked-list-cycle-ii/
 https://leetcode.com/problems/reorder-list/
 
 ```python
+def reorderList(self, head: ListNode) -> None:
+    if head is None:
+        return
 
-    def reorderList(self, head: ListNode) -> None:
-        if head is None:
-            return
+    end_of_list = middle_of_list = head
+    while end_of_list and end_of_list.next:
+        end_of_list = end_of_list.next.next
+        middle_of_list = middle_of_list.next
 
-        end_of_list = middle_of_list = head
-        while end_of_list and end_of_list.next:
-            end_of_list = end_of_list.next.next
-            middle_of_list = middle_of_list.next
+    reversed_last_half = None
+    while middle_of_list:
+        node = middle_of_list.next
+        middle_of_list.next = reversed_last_half
+        reversed_last_half, middle_of_list = middle_of_list, node
 
-        reversed_last_half = None
-        while middle_of_list:
-            node = middle_of_list.next
-            middle_of_list.next = reversed_last_half
-            reversed_last_half, middle_of_list = middle_of_list, node
-
-        first_half = head
-        while reversed_last_half.next:
-            temp, first_half.next = first_half.next, reversed_last_half
-            first_half, temp = temp, reversed_last_half.next
-            reversed_last_half.next = first_half
-            reversed_last_half = temp
+    first_half = head
+    while reversed_last_half.next:
+        temp, first_half.next = first_half.next, reversed_last_half
+        first_half, temp = temp, reversed_last_half.next
+        reversed_last_half.next = first_half
+        reversed_last_half = temp
 
 ```
 
