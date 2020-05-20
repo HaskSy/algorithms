@@ -8,7 +8,7 @@
 
 https://leetcode.com/problems/two-sum/
 
-'''python
+```python
 
     def twoSum(nums: List[int], target: int) -> List[int]:
         cache = {}
@@ -32,20 +32,20 @@ https://leetcode.com/problems/two-sum/
             else:
                 right -= 1
 
-'''
+```
 
 ## 3Sum
 
 https://leetcode.com/problems/3sum/
 
-'''python
+```python
 
-'''
+```
 
 ## Subarray Sum Equals k
 
 https://leetcode.com/problems/subarray-sum-equals-k/
 
-'''python
+```python
 
-'''
+```
