@@ -25,20 +25,19 @@ https://leetcode.com/problems/binary-tree-inorder-traversal/
 https://leetcode.com/problems/symmetric-tree/
 
 ```python
+def isSymmetric(self, root: TreeNode) -> bool:
+    if not root:
+        return True
 
-    def isSymmetric(self, root: TreeNode) -> bool:
-        if not root:
+    def rec_sym(left: TreeNode, right: TreeNode) -> bool:
+        if not left and not right:
             return True
+        if not (left and right):
+            return False
+        return left.val == right.val and rec_sym(left.left, right.right) and \
+            rec_sym(left.right, right.left)
 
-        def rec_sym(left_branch: TreeNode, right_branch: TreeNode) -> bool:
-            if not left_branch and not right_branch:
-                return True
-            if not (left_branch and right_branch):
-                return False
-            return (left_branch.val == right_branch.val and rec_sym(left_branch.left, right_branch.right) and
-                    rec_sym(left_branch.right, right_branch.left))
-
-        return rec_sym(root.left, root.right)
+    return rec_sym(root.left, root.right)
 
 ```
 
