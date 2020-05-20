@@ -9,14 +9,19 @@
 https://leetcode.com/problems/insert-interval/
 
 ```python
-def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+def insert(self, intervals, newInterval):
+    """
+    :type intervals: List[List[int]]
+    :type newInterval: List[int]
+    :rtype: List[List[int]]
+    """
     if not intervals:
         return [newInterval]
     if not newInterval:
         return intervals
     i = 0
     while i < len(intervals):
-        if (newInterval[0] < intervals[i][0]):
+        if newInterval[0] < intervals[i][0]:
             intervals = intervals[:i] + [newInterval] + intervals[i:]
             break
         i += 1
@@ -26,9 +31,9 @@ def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[Lis
     for j in range(i, len(intervals)):
         if not upd_intervals:
             upd_intervals.append(intervals[j])
-        elif (intervals[j][0] == upd_intervals[-1][0]):
+        elif intervals[j][0] == upd_intervals[-1][0]:
             upd_intervals[-1][1] = max(intervals[j][-1], upd_intervals[-1][-1])
-        elif (intervals[j][0] <= upd_intervals[-1][-1]):
+        elif intervals[j][0] <= upd_intervals[-1][-1]:
             upd_intervals[-1][1] = max(intervals[j][-1], upd_intervals[-1][-1])
         else:
             upd_intervals.append(intervals[j])
