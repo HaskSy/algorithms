@@ -20,15 +20,14 @@ https://leetcode.com/problems/two-sum/
 
 
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        nums_copy = sorted(nums)
+        nums_copy = [(nums[i], i) for i in range(len(nums))]
+        nums_copy.sort(key=lambda elem: elem[0])
         left = 0
         right = len(nums) - 1
         while left != right:
-            if nums_copy[left] + nums_copy[right] == target:
-                left = nums.index(nums_copy[left])
-                right = len(nums) - nums[::-1].index(nums_copy[right]) - 1
-                return [left, right]
-            elif nums_copy[left] + nums_copy[right] < target:
+            if nums_copy[left][0] + nums_copy[right][0] == target:
+                return [nums_copy[left][1], nums_copy[right][1]]
+            elif nums_copy[left][0] + nums_copy[right][0] < target:
                 left += 1
             else:
                 right -= 1
