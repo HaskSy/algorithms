@@ -25,8 +25,7 @@ https://leetcode.com/problems/merge-intervals/
 https://leetcode.com/problems/non-overlapping-intervals
 
 ```python
-
-    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
         if not intervals:
             return 0
         intervals.sort(key=lambda interval: interval[-1])
