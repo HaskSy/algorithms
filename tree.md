@@ -16,79 +16,79 @@
 
 https://leetcode.com/problems/binary-tree-inorder-traversal/
 
-'''python
+```python
     
-'''
+```
 
 ## Symmetric Tree
 
 https://leetcode.com/problems/symmetric-tree/
 
-'''python
+```python
 
-'''
+```
 
 ## Maximum Depth Of Binary Tree
 
 https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
-'''python
+```python
 
-'''
+```
 
 ## Same Tree
 
 https://leetcode.com/problems/same-tree/
 
-'''python
+```python
 
-'''
+```
 
 ## Invert Binary Tree
 
 https://leetcode.com/problems/invert-binary-tree/
 
-'''python
+```python
 
-'''
+```
 
 ## Path Sum
 
 https://leetcode.com/problems/path-sum/
 
-'''python
+```python
 
-'''
+```
 
 ## Binary Tree Level Order Traversal
 
 https://leetcode.com/problems/binary-tree-level-order-traversal/
 
-'''python
+```python
 
-'''
+```
 
 ## Subtree Of Another Tree
 
 https://leetcode.com/problems/subtree-of-another-tree/
 
-'''python
+```python
 
-'''
+```
 
 ## Kth Smallest Element In a BST
 
 https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 
-'''python
+```python
 
-'''
+```
 
 ## Validate Binary Search Tree
 
 https://leetcode.com/problems/validate-binary-search-tree/
 
-'''python
+```python
 
     def isValidBST(self, root: TreeNode) -> bool:
         stack = []
@@ -104,12 +104,12 @@ https://leetcode.com/problems/validate-binary-search-tree/
             root = root.right
         return True
 
-'''
+```
 
 ## Binary Search Tree Iterator
 
 https://leetcode.com/problems/binary-search-tree-iterator/
 
-'''python
+```python
 
-'''
+```
