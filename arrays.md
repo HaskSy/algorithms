@@ -26,7 +26,7 @@ https://leetcode.com/problems/subarray-sum-equals-k/
 
 '''python
 
-  def subarraySum(self, nums: List[int], k: int) -> int:
+    def subarraySum(self, nums: List[int], k: int) -> int:
         hash_sum = {}
         index_sum = 0
         count = 0
