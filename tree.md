@@ -74,6 +74,29 @@ https://leetcode.com/problems/subtree-of-another-tree/
 
 '''python
 
+    def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
+        def is_same(p: TreeNode, q: TreeNode) -> bool:
+            if not p and not q:
+                return True
+            if not (p and q):
+                return False
+            return (p.val == q.val) and is_same(p.left, q.left) and is_same(p.right, q.right)
+
+        queue = [s]
+
+        while queue:
+            queue_size = len(queue)
+            for _ in range(queue_size):
+                node = queue.pop(0)
+                if is_same(node, t):
+                    return True
+                if node is not None:
+                    if node.left:
+                        queue.append(node.left)
+                    if node.right:
+                        queue.append(node.right)
+        return False
+
 '''
 
 ## Kth Smallest Element In a BST
