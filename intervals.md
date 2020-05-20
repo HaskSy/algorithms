@@ -8,22 +8,22 @@
 
 https://leetcode.com/problems/insert-interval/
 
-'''python
+```python
 
-'''
+```
 
 ## Merge Intervals
 
 https://leetcode.com/problems/merge-intervals/
 
-'''python
+```python
 
-'''
+```
 
 ## Non-overlapping intervals
 
 https://leetcode.com/problems/non-overlapping-intervals
 
-'''python
+```python
 
-'''
+```
