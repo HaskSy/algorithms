@@ -89,4 +89,38 @@ https://leetcode.com/problems/sort-list/
 
 '''python
 
+    def sortList(self, head: ListNode) -> ListNode:
+
+        def merge(l1: ListNode, l2: ListNode) -> ListNode:
+            list_copy = result = ListNode()
+            while l1 and l2:
+                if l1.val <= l2.val:
+                    list_copy.next, l1 = l1, l1.next
+                else:
+                    list_copy.next, l2 = l2, l2.next
+                list_copy = list_copy.next
+            if l1:
+                list_copy.next = l1
+            else:
+                list_copy.next = l2
+            return result.next
+
+        def merge_sort(head_list: ListNode) -> ListNode:
+            if not head_list or not head_list.next:
+                return head_list
+            end_of_list = middle_of_list = head_list
+
+            middle_merge = None
+            while end_of_list and end_of_list.next:  
+                middle_merge = middle_of_list        
+                end_of_list = end_of_list.next.next
+                middle_of_list = middle_of_list.next
+
+            middle_merge.next = None  
+            left = merge_sort(head_list)
+            right = merge_sort(middle_of_list)
+            return merge(left, right)
+
+        return merge_sort(head)
+
 '''
