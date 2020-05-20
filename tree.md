@@ -82,19 +82,17 @@ https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 
 '''python
 
-    def isValidBST(self, root: TreeNode) -> bool:
+    def kthSmallest(self, root: TreeNode, k: int) -> int:
         stack = []
-        data = float('-inf')
-        while stack or root:
+        while root or stack:
             while root:
                 stack.append(root)
                 root = root.left
             root = stack.pop()
-            if root.val <= data:
-                return False
-            data = root.val
+            k -= 1
+            if k == 0:
+                return root.val
             root = root.right
-        return True
 
 '''
 
