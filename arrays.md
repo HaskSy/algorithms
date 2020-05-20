@@ -8,15 +8,15 @@
 
 https://leetcode.com/problems/two-sum/
 
-'''python
+```python
 
-'''
+```
 
 ## 3Sum
 
 https://leetcode.com/problems/3sum/
 
-'''python
+```python
 
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         result = []
@@ -43,12 +43,12 @@ https://leetcode.com/problems/3sum/
                 n.append(i)
         return n
 
-'''
+```
 
 ## Subarray Sum Equals k
 
 https://leetcode.com/problems/subarray-sum-equals-k/
 
-'''python
+```python
 
-'''
+```
