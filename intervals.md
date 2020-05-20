@@ -8,23 +8,23 @@
 
 https://leetcode.com/problems/insert-interval/
 
-'''python
+```python
 
-'''
+```
 
 ## Merge Intervals
 
 https://leetcode.com/problems/merge-intervals/
 
-'''python
+```python
 
-'''
+```
 
 ## Non-overlapping intervals
 
 https://leetcode.com/problems/non-overlapping-intervals
 
-'''python
+```python
 
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
         if not intervals:
@@ -38,4 +38,4 @@ https://leetcode.com/problems/non-overlapping-intervals
                 prev_result = intervals[i][-1]
         return count
 
-'''
+```
