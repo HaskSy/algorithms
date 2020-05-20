@@ -18,7 +18,7 @@ https://leetcode.com/problems/3sum/
 
 '''python
 
-  def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
         result = []
         nums.sort()
         for i in range(len(nums)):
