@@ -8,7 +8,7 @@
 
 https://leetcode.com/problems/insert-interval/
 
-'''python
+```python
 
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
         if not intervals:
@@ -35,20 +35,20 @@ https://leetcode.com/problems/insert-interval/
                 upd_intervals.append(intervals[j])
         return upd_intervals
 
-'''
+```
 
 ## Merge Intervals
 
 https://leetcode.com/problems/merge-intervals/
 
-'''python
+```python
 
-'''
+```
 
 ## Non-overlapping intervals
 
 https://leetcode.com/problems/non-overlapping-intervals
 
-'''python
+```python
 
-'''
+```
