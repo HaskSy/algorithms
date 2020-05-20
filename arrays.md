@@ -10,7 +10,7 @@ https://leetcode.com/problems/two-sum/
 
 '''python
 
-  def twoSum(nums: List[int], target: int) -> List[int]:
+    def twoSum(nums: List[int], target: int) -> List[int]:
         cache = {}
         for diff, value in enumerate(nums):
             if (target - value) in cache:
