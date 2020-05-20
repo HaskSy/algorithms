@@ -57,15 +57,13 @@ https://leetcode.com/problems/invert-binary-tree/
 https://leetcode.com/problems/path-sum/
 
 ```python
-
-    def hasPathSum(self, root: TreeNode, sum: int) -> bool:
-        if root is None:
-            return False
-        substract = sum - root.val
-        if not root.left and not root.right and root.val == sum:
-            return True
-        result = (self.hasPathSum(root.left, substract) or self.hasPathSum(root.right, substract))
-        return result
+def hasPathSum(self, root: TreeNode, sum: int) -> bool:
+    if root is None:
+        return False
+    sub = sum - root.val
+    if not root.left and not root.right and root.val == sum:
+        return True
+    return self.hasPathSum(root.left, sub) or self.hasPathSum(root.right, sub)
 
 ```
 
