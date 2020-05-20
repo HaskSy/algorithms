@@ -90,6 +90,20 @@ https://leetcode.com/problems/validate-binary-search-tree/
 
 '''python
 
+    def isValidBST(self, root: TreeNode) -> bool:
+        stack = []
+        data = float('-inf')
+        while stack or root:
+            while root:
+                stack.append(root)
+                root = root.left
+            root = stack.pop()
+            if root.val <= data:
+                return False
+            data = root.val
+            root = root.right
+        return True
+
 '''
 
 ## Binary Search Tree Iterator
