@@ -8,15 +8,15 @@
 
 https://leetcode.com/problems/insert-interval/
 
-'''python
+```python
 
-'''
+```
 
 ## Merge Intervals
 
 https://leetcode.com/problems/merge-intervals/
 
-'''python
+```python
 
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         if not intervals:
@@ -32,12 +32,12 @@ https://leetcode.com/problems/merge-intervals/
                 mergeabled.append(interval)
         return mergeabled
 
-'''
+```
 
 ## Non-overlapping intervals
 
 https://leetcode.com/problems/non-overlapping-intervals
 
-'''python
+```python
 
-'''
+```
