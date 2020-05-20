@@ -10,7 +10,7 @@ https://leetcode.com/problems/insert-interval/
 
 '''python
 
-  def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+    def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
         if not intervals:
             return [newInterval]
         if not newInterval:
