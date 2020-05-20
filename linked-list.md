@@ -60,8 +60,8 @@ https://leetcode.com/problems/linked-list-cycle/
     def hasCycle(self, head: ListNode) -> bool:
         cycle_a = cycle_b = head
         while cycle_a and cycle_a.next:
-            cycle_a = cycle_a.next.next  # указатель cycle_a "двигается быстрее" указателя cycle_b
-            cycle_b = cycle_b.next       # если есть цикл, то рано или поздно cycle_a "обгонит на целый круг" cycle_b
+            cycle_a = cycle_a.next.next  
+            cycle_b = cycle_b.next       
             if cycle_a == cycle_b:
                 return True
         else:
