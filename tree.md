@@ -33,11 +33,10 @@ https://leetcode.com/problems/symmetric-tree/
 https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
 ```python
-
-    def maxDepth(self, root: TreeNode) -> int:
-        if root is None:
-            return 0
-        return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
+def maxDepth(self, root: TreeNode) -> int:
+    if root is None:
+        return 0
+    return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
 
 ```
 
