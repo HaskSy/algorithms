@@ -67,7 +67,7 @@ https://leetcode.com/problems/linked-list-cycle-ii/
 
     def detectCycle(self, head: ListNode) -> ListNode:
         cycle_a = cycle_b = head
-        while cycle_a and cycle_a.next:  # функция hasCycle
+        while cycle_a and cycle_a.next:
             cycle_a = cycle_a.next.next
             cycle_b = cycle_b.next
             if cycle_a == cycle_b:
