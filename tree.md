@@ -82,6 +82,20 @@ https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 
 '''python
 
+    def isValidBST(self, root: TreeNode) -> bool:
+        stack = []
+        data = float('-inf')
+        while stack or root:
+            while root:
+                stack.append(root)
+                root = root.left
+            root = stack.pop()
+            if root.val <= data:
+                return False
+            data = root.val
+            root = root.right
+        return True
+
 '''
 
 ## Validate Binary Search Tree
