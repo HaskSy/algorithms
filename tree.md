@@ -98,7 +98,6 @@ https://leetcode.com/problems/binary-search-tree-iterator/
 
 ```python
 class BSTIterator:
-
     def __init__(self, root: TreeNode):
         self.stack = []
         while root:
@@ -106,17 +105,15 @@ class BSTIterator:
             root = root.left
 
     def next(self) -> int:
-        root_pop = self.stack.pop()
-        if root_pop:
-            root_pop_copy = root_pop.right
-            while root_pop_copy:
-                self.stack.append(root_pop_copy)
-                root_pop_copy = root_pop_copy.left
-        return root_pop.val
-
+        next = self.stack.pop()
+        if next:
+            current = next.right
+            while current:
+                self.stack.append(current)
+                current = current.left
+        return next.val
+    
     def hasNext(self) -> bool:
-        if self.stack:
-            return True
-        return False
+        return len(self.stack) > 0
 
 ```
