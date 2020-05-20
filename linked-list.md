@@ -25,6 +25,13 @@ https://leetcode.com/problems/middle-of-the-linked-list/
 
 '''python
 
+    def middleNode(self, head: ListNode) -> ListNode:
+        end_of_list = middle_of_list = head        # указатель end_of_list проходит два шага за цикл
+        while end_of_list and end_of_list.next:    # указатель middle_of_list проходит и шаг за цикл
+            end_of_list = end_of_list.next.next
+            middle_of_list = middle_of_list.next
+        return middle_of_list
+        
 '''
 
 ## Palindrome Linked List
