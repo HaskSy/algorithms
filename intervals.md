@@ -18,7 +18,7 @@ https://leetcode.com/problems/merge-intervals/
 
 '''python
 
-  def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         if not intervals:
             return intervals
         intervals.sort(key=lambda interval: interval[0])
