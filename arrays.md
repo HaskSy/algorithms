@@ -19,19 +19,19 @@ https://leetcode.com/problems/two-sum/
                 cache[value] = diff
 
 
-    def twoSum_2(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
         nums_copy = sorted(nums)
-        start_pointer = 0
-        end_pointer = len(nums) - 1
-        while start_pointer != end_pointer:
-            if nums_copy[start_pointer] + nums_copy[end_pointer] == target:
-                start_pointer = nums.index(nums_copy[start_pointer])
-                end_pointer = len(nums) - nums[::-1].index(nums_copy[end_pointer]) - 1
-                return [start_pointer, end_pointer]
-            elif nums_copy[start_pointer] + nums_copy[end_pointer] < target:
-                start_pointer += 1
+        left = 0
+        right = len(nums) - 1
+        while left != right:
+            if nums_copy[left] + nums_copy[right] == target:
+                left = nums.index(nums_copy[left])
+                right = len(nums) - nums[::-1].index(nums_copy[right]) - 1
+                return [left, right]
+            elif nums_copy[left] + nums_copy[right] < target:
+                left += 1
             else:
-                end_pointer -= 1
+                right -= 1
 
 '''
 
