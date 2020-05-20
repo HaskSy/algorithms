@@ -32,13 +32,12 @@ https://leetcode.com/problems/middle-of-the-linked-list/
 https://leetcode.com/problems/palindrome-linked-list/
 
 ```python
-
-    def isPalindrome(self, head: ListNode) -> bool:
-        xs = []
-        while head:
-            xs.append(head.val)
-            head = head.next
-        return xs == xs[::-1]
+def isPalindrome(self, head: ListNode) -> bool:
+    xs = []
+    while head:
+        xs.append(head.val)
+        head = head.next
+    return xs == xs[::-1]
 
 ```
 
