@@ -8,23 +8,23 @@
 
 https://leetcode.com/problems/two-sum/
 
-'''python
+```python
 
-'''
+```
 
 ## 3Sum
 
 https://leetcode.com/problems/3sum/
 
-'''python
+```python
 
-'''
+```
 
 ## Subarray Sum Equals k
 
 https://leetcode.com/problems/subarray-sum-equals-k/
 
-'''python
+```python
 
     def subarraySum(self, nums: List[int], k: int) -> int:
         hash_sum = {}
@@ -43,4 +43,4 @@ https://leetcode.com/problems/subarray-sum-equals-k/
                 hash_sum[index_sum] += 1
         return count
 
-'''
+```
