@@ -36,6 +36,19 @@ def inorderTraversal(self, root: TreeNode) -> List[int]:
 https://leetcode.com/problems/symmetric-tree/
 
 ```python
+def isSymmetric(self, root: TreeNode) -> bool:
+    if not root:
+        return True
+
+    def rec_sym(left: TreeNode, right: TreeNode) -> bool:
+        if not left and not right:
+            return True
+        if not left or not right:
+            return False
+        return left.val == right.val and rec_sym(left.left, right.right) and \
+            rec_sym(left.right, right.left)
+
+    return rec_sym(root.left, root.right)
 
 ```
 
@@ -44,6 +57,10 @@ https://leetcode.com/problems/symmetric-tree/
 https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
 ```python
+def maxDepth(self, root: TreeNode) -> int:
+    if root is None:
+        return 0
+    return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
 
 ```
 
@@ -52,6 +69,13 @@ https://leetcode.com/problems/maximum-depth-of-binary-tree/
 https://leetcode.com/problems/same-tree/
 
 ```python
+def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
+        if not p and not q:
+            return True
+        if not p or not q:
+            return False
+        return (p.val == q.val) and self.isSameTree(p.left, q.left) and \
+            self.isSameTree(p.right, q.right)
 
 ```
 
@@ -60,6 +84,13 @@ https://leetcode.com/problems/same-tree/
 https://leetcode.com/problems/invert-binary-tree/
 
 ```python
+def invertTree(self, root: TreeNode) -> TreeNode:
+    if root is None:
+        return root
+    root.right, root.left = root.left, root.right
+    self.invertTree(root.right)
+    self.invertTree(root.left)
+    return root
 
 ```
 
@@ -76,6 +107,24 @@ https://leetcode.com/problems/path-sum/
 https://leetcode.com/problems/binary-tree-level-order-traversal/
 
 ```python
+def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    result = []
+    if root is None:
+        return result
+    queue = [root]
+    while queue:
+        level = []
+        queue_size = len(queue)
+        for _ in range(queue_size):
+            node = queue.pop(0)
+            if node is not None:
+                level.append(node.val)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+        result.append(level)
+    return result
 
 ```
 
