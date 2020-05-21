@@ -30,7 +30,7 @@ def middleNode(self, head: ListNode) -> ListNode:
         end_of_list = end_of_list.next.next
         middle_of_list = middle_of_list.next
     return middle_of_list
-    
+
 ```
 
 ## Palindrome Linked List
@@ -86,6 +86,18 @@ https://leetcode.com/problems/reorder-list/
 https://leetcode.com/problems/intersection-of-two-linked-lists/
 
 ```python
+def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+    head_a_copy, head_b_copy = headA, headB
+    while head_a_copy is not head_b_copy:
+        if head_a_copy:
+            head_a_copy = head_a_copy.next
+        else:
+            head_a_copy = headB
+        if head_b_copy:
+            head_b_copy = head_b_copy.next
+        else:
+            head_b_copy = headA
+    return head_a_copy
 
 ```
 
