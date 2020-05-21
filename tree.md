@@ -16,9 +16,9 @@
 
 https://leetcode.com/problems/binary-tree-inorder-traversal/
 
-'''python
+```python
    
-'''
+```
 
 ## Symmetric Tree
 
@@ -64,7 +64,7 @@ https://leetcode.com/problems/path-sum/
 
 https://leetcode.com/problems/binary-tree-level-order-traversal/
 
-'''python
+```python
 def levelOrder(self, root: TreeNode) -> List[List[int]]:
     result = []
     if root is None:
@@ -84,7 +84,7 @@ def levelOrder(self, root: TreeNode) -> List[List[int]]:
         result.append(level)
     return result
 
-'''
+```
 
 ## Subtree Of Another Tree
 
