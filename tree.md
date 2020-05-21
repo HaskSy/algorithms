@@ -60,10 +60,10 @@ https://leetcode.com/problems/path-sum/
 def hasPathSum(self, root: TreeNode, sum: int) -> bool:
     if root is None:
         return False
-    sub = sum - root.val
     if not root.left and not root.right and root.val == sum:
         return True
-    return self.hasPathSum(root.left, sub) or self.hasPathSum(root.right, sub)
+    return self.hasPathSum(root.left, sum - root.val) or \
+        self.hasPathSum(root.right, sum - root.val)
 
 ```
 
