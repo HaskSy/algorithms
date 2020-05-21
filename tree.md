@@ -17,7 +17,7 @@
 https://leetcode.com/problems/binary-tree-inorder-traversal/
 
 ```python
-    
+
 ```
 
 ## Symmetric Tree
@@ -56,6 +56,13 @@ def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
 https://leetcode.com/problems/invert-binary-tree/
 
 ```python
+def invertTree(self, root: TreeNode) -> TreeNode:
+    if root is None:
+        return root
+    root.right, root.left = root.left, root.right
+    self.invertTree(root.right)
+    self.invertTree(root.left)
+    return root
 
 ```
 
@@ -72,6 +79,24 @@ https://leetcode.com/problems/path-sum/
 https://leetcode.com/problems/binary-tree-level-order-traversal/
 
 ```python
+def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    result = []
+    if root is None:
+        return result
+    queue = [root]
+    while queue:
+        level = []
+        queue_size = len(queue)
+        for _ in range(queue_size):
+            node = queue.pop(0)
+            if node is not None:
+                level.append(node.val)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+        result.append(level)
+    return result
 
 ```
 

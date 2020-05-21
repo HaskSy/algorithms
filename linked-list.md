@@ -15,78 +15,84 @@
 
 https://leetcode.com/problems/reverse-linked-list/
 
-'''python
+```python
 
-'''
+```
 
 ## Middle Of The Linked List
 
 https://leetcode.com/problems/middle-of-the-linked-list/
 
-'''python
-
-'''
+```python
+def middleNode(self, head: ListNode) -> ListNode:
+    end_of_list = middle_of_list = head
+    while end_of_list and end_of_list.next:
+        end_of_list = end_of_list.next.next
+        middle_of_list = middle_of_list.next
+    return middle_of_list
+    
+```
 
 ## Palindrome Linked List
 
 https://leetcode.com/problems/palindrome-linked-list/
 
-'''python
+```python
 
-'''
+```
 
 ## Merge two Sorted Lists
 
 https://leetcode.com/problems/merge-two-sorted-lists/
 
-'''python
+```python
 
-'''
+```
 
 ## Remove Nth Node From End Of List
 
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
-'''python
+```python
 
-'''
+```
 
 ## Linked List Cycle
 
 https://leetcode.com/problems/linked-list-cycle/
 
-'''python
+```python
 
-'''
+```
 
 ## Linked List Cycle II
 
 https://leetcode.com/problems/linked-list-cycle-ii/
 
-'''python
+```python
 
-'''
+```
 
 ## Reorder List
 
 https://leetcode.com/problems/reorder-list/
 
-'''python
+```python
 
-'''
+```
 
 ## Intersection Of Two Linked Lists
 
 https://leetcode.com/problems/intersection-of-two-linked-lists/
 
-'''python
+```python
 
-'''
+```
 
 ## Sort List
 
 https://leetcode.com/problems/sort-list/
 
-'''python
+```python
 
-'''
+```
