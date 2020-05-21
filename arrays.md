@@ -8,22 +8,22 @@
 
 https://leetcode.com/problems/two-sum/
 
-```python
+'''python
 
-```
+'''
 
 ## 3Sum
 
 https://leetcode.com/problems/3sum/
 
-```python
+'''python
 
-```
+'''
 
 ## Subarray Sum Equals k
 
 https://leetcode.com/problems/subarray-sum-equals-k/
 
-```python
+'''python
 
-```
+'''
