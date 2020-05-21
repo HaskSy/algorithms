@@ -70,15 +70,13 @@ def detectCycle(self, head: ListNode) -> ListNode:
         cycle_a = cycle_a.next.next
         cycle_b = cycle_b.next
         if cycle_a == cycle_b:
-            break
+            cycle_b = head
+            while cycle_a is not cycle_b:
+                cycle_a = cycle_a.next
+                cycle_b = cycle_b.next
+            return cycle_b
     else:
         return None
-
-    cycle_b = head
-    while cycle_a is not cycle_b:
-        cycle_a = cycle_a.next
-        cycle_b = cycle_b.next
-    return cycle_b
 
 ```
 
