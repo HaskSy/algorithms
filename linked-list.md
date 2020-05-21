@@ -30,7 +30,7 @@ def middleNode(self, head: ListNode) -> ListNode:
         end_of_list = end_of_list.next.next
         middle_of_list = middle_of_list.next
     return middle_of_list
-
+    
 ```
 
 ## Palindrome Linked List
