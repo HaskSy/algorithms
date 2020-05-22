@@ -18,11 +18,12 @@ https://leetcode.com/problems/reverse-linked-list/
 ```python
 def reverseList(self, head: ListNode) -> ListNode:
     prev = None
-    while head:
-        node = head.next
-        head.next = prev
-        prev, head = head, node
-    self.head = prev
+    cur = head
+    while cur:
+        node = cur.next
+        cur.next = prev
+        prev, cur = cur, node
+    self.cur = prev
     return prev
 
 ```
