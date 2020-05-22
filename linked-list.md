@@ -75,8 +75,7 @@ def detectCycle(self, head: ListNode) -> ListNode:
                 cycle_a = cycle_a.next
                 cycle_b = cycle_b.next
             return cycle_b
-    else:
-        return None
+    return None
 
 ```
 
