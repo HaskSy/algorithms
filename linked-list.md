@@ -41,20 +41,20 @@ https://leetcode.com/problems/merge-two-sorted-lists/
 
 ```python
 def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-    merged_list = pointer = ListNode()
+    merged_list = currentNode = ListNode()
     while l1 and l2:
         if l1.val < l2.val:
-            pointer.next = l1
+            currentNode.next = l1
             l1 = l1.next
         else:
-            pointer.next = l2
+            currentNode.next = l2
             l2 = l2.next
-        pointer = pointer.next
+        currentNode = currentNode .next
 
     if l1:
-        pointer.next = l1
-    elif l2:
-        pointer.next = l2
+        currentNode.next = l1
+    if l2:
+        currentNode.next = l2
     return merged_list.next
 
 ```
