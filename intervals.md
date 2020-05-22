@@ -8,22 +8,35 @@
 
 https://leetcode.com/problems/insert-interval/
 
-'''python
+```python
 
-'''
+```
 
 ## Merge Intervals
 
 https://leetcode.com/problems/merge-intervals/
 
-'''python
+```python
+def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+    if not intervals:
+        return intervals
+    intervals.sort(key=lambda interval: interval[0])
+    result = [intervals[0]]
+    for interval in intervals:
+        if (interval[0] == result[-1][0]):
+            result[-1][1] = max(interval[-1], result[-1][-1])
+        elif (interval[0] <= result[-1][-1]):
+            result[-1][1] = max(interval[-1], result[-1][-1])
+        else:
+            result.append(interval)
+    return result
 
-'''
+```
 
 ## Non-overlapping intervals
 
 https://leetcode.com/problems/non-overlapping-intervals
 
-'''python
+```python
 
-'''
+```
