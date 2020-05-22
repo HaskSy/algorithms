@@ -15,29 +15,19 @@ def insert(self, intervals, newInterval):
     :type newInterval: List[int]
     :rtype: List[List[int]]
     """
-    if not intervals:
-        return [newInterval]
-    if not newInterval:
-        return intervals
-    i = 0
-    while i < len(intervals):
-        if newInterval[0] < intervals[i][0]:
-            intervals = intervals[:i] + [newInterval] + intervals[i:]
-            break
-        i += 1
-    else:
-        intervals.append(newInterval)
-    upd_intervals = intervals[:i]
-    for j in range(i, len(intervals)):
-        if not upd_intervals:
-            upd_intervals.append(intervals[j])
-        elif intervals[j][0] == upd_intervals[-1][0]:
-            upd_intervals[-1][1] = max(intervals[j][-1], upd_intervals[-1][-1])
-        elif intervals[j][0] <= upd_intervals[-1][-1]:
-            upd_intervals[-1][1] = max(intervals[j][-1], upd_intervals[-1][-1])
-        else:
-            upd_intervals.append(intervals[j])
-    return upd_intervals
+    middle = [newInterval[0], newInterval[1]]
+    left = []
+    right = []
+
+    for interv in intervals: 
+        if interv[1] < middle[0]: 
+            left.append(interv)
+        elif interv[0] > middle[1]: 
+            right.append(interv)
+        else: 
+            middle[0] = min(interv[0], middle[0])
+            middle[1] = max(interv[1], middle[1])
+    return left + [middle] + right
 
 ```
 
