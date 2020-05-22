@@ -74,18 +74,16 @@ https://leetcode.com/problems/subtree-of-another-tree/
 
 ```python
 def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
-        def tree_to_str(node):
-            if not node:
-                return "None"
-            return "|" + str(node.val) + tree_to_str(node.left) + \
-                tree_to_str(node.right)
-        s_str = tree_to_str(s)
-        t_str = tree_to_str(t)
-        try:
-            s_str.index(t_str)
-            return True
-        except ValueError:
-            return False
+    def tree_to_str(node):
+        if not node:
+            return "None"
+        return "|" + str(node.val) + tree_to_str(node.left) + \
+            tree_to_str(node.right)
+    s_str = tree_to_str(s)
+    t_str = tree_to_str(t)
+    if t_str in s_str:
+        return True
+    return False
 
 ```
 
