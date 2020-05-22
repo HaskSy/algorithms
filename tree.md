@@ -82,7 +82,7 @@ def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
         s_str = tree_to_str(s)
         t_str = tree_to_str(t)
         try:
-            index = s_str.index(t_str)
+            s_str.index(t_str)
             return True
         except ValueError:
             return False
