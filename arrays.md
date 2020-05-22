@@ -19,7 +19,7 @@ def twoSum(nums: List[int], target: int) -> List[int]:
 
 
 def twoSum(self, nums: List[int], target: int) -> List[int]:
-    nums_copy = [i for i in enumerate(nums)]
+    nums_copy = [(value, index) for value, index in enumerate(nums)]
     nums_copy.sort(key=lambda elem: elem[1])
     left = 0
     right = len(nums) - 1
