@@ -63,8 +63,7 @@ def hasCycle(self, head: ListNode) -> bool:
         cycle_b = cycle_b.next
         if cycle_a == cycle_b:
             return True
-    else:
-        return False
+    return False
 
 ```
 
