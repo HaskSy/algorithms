@@ -39,6 +39,20 @@ def isPalindrome(self, head: ListNode) -> bool:
         head = head.next
     return xs == xs[::-1]
 
+def isPalindrome(self, head: ListNode) -> bool:
+        reverse = None
+        middle = end = head
+        while end and end.next:
+            end = end.next.next
+            reverse, reverse.next, middle = \
+                middle, reverse, middle.next
+        if end:
+            middle = middle.next
+        while reverse and reverse.val == middle.val:
+            middle = middle.next
+            reverse = reverse.next
+        return not reverse
+
 ```
 
 ## Merge two Sorted Lists
