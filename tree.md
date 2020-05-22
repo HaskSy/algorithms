@@ -77,7 +77,7 @@ def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
         def tree_to_str(node):
             if not node:
                 return "None"
-            return "|" + "{0}".format(node.val) + tree_to_str(node.left) + \
+            return "|" + str(node.val) + tree_to_str(node.left) + \
                 tree_to_str(node.right)
         s_str = tree_to_str(s)
         t_str = tree_to_str(t)
