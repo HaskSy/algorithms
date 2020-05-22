@@ -19,14 +19,14 @@ def twoSum(nums: List[int], target: int) -> List[int]:
 
 
 def twoSum(self, nums: List[int], target: int) -> List[int]:
-    nums_copy = [(nums[i], i) for i in range(len(nums))]
-    nums_copy.sort(key=lambda elem: elem[0])
+    nums_copy = [i for i in enumerate(nums)]
+    nums_copy.sort(key=lambda elem: elem[1])
     left = 0
     right = len(nums) - 1
     while left != right:
-        if nums_copy[left][0] + nums_copy[right][0] == target:
-            return [nums_copy[left][1], nums_copy[right][1]]
-        elif nums_copy[left][0] + nums_copy[right][0] < target:
+        if nums_copy[left][1] + nums_copy[right][1] == target:
+            return [nums_copy[left][0], nums_copy[right][0]]
+        elif nums_copy[left][1] + nums_copy[right][1] < target:
             left += 1
         else:
             right -= 1
