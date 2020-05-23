@@ -57,11 +57,11 @@ https://leetcode.com/problems/linked-list-cycle/
 
 ```python
 def hasCycle(self, head: ListNode) -> bool:
-    cycle_a = cycle_b = head
-    while cycle_a and cycle_a.next:
-        cycle_a = cycle_a.next.next
-        cycle_b = cycle_b.next
-        if cycle_a == cycle_b:
+    fast = slow = head
+    while fast and fast.next:
+        fast = fast.next.next
+        slow = slow.next
+        if fast == slow:
             return True
     return False
 
