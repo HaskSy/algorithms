@@ -87,6 +87,14 @@ https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 https://leetcode.com/problems/linked-list-cycle/
 
 ```python
+def hasCycle(self, head: ListNode) -> bool:
+    fast = slow = head
+    while fast and fast.next:
+        fast = fast.next.next
+        slow = slow.next
+        if fast == slow:
+            return True
+    return False
 
 ```
 
