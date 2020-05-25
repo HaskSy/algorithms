@@ -103,6 +103,23 @@ def isValidBST(self, root: TreeNode) -> bool:
         root = root.right
     return True
 
+
+def helper(self, root, left=float('-inf'), right=float('inf')):
+    """
+    :type root: TreeNode
+    :rtype: bool
+    """
+    if root is None:
+        return True
+    if not left < root.val < right:
+        return False
+    return self.helper(root.left, left, root.val) and \
+        self.helper(root.right, root.val, right)
+
+
+def isValidBST(self, root: TreeNode) -> bool:
+    return self.helper(root)
+
 ```
 
 ## Binary Search Tree Iterator
