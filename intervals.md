@@ -29,6 +29,25 @@ def insert(self, intervals, newInterval):
             middle[1] = max(interv[1], middle[1])
     return left + [middle] + right
 
+
+def insert(self, intervals, newInterval):
+    """
+    :type intervals: List[List[int]]
+    :type newInterval: List[int]
+    :rtype: List[List[int]]
+    """
+    intervals.append(newInterval)
+    intervals.sort(key=lambda interval: interval[0])
+    result = [intervals[0]]
+    for interval in intervals:
+        if (interval[0] == result[-1][0]):
+            result[-1][1] = max(interval[-1], result[-1][-1])
+        elif (interval[0] <= result[-1][-1]):
+            result[-1][1] = max(interval[-1], result[-1][-1])
+        else:
+            result.append(interval)
+    return result
+
 ```
 
 ## Merge Intervals
