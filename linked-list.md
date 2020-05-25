@@ -79,6 +79,20 @@ def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
 ```python
+def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+    answer = ListNode()
+    answer.next = head
+    pointer_head = head
+    pointer_answer = answer
+
+    for _ in range(n):
+        pointer_head = pointer_head.next
+
+    while pointer_head:
+        pointer_head = pointer_head.next
+        pointer_answer = pointer_answer.next
+    pointer_answer.next = pointer_answer.next.next
+    return answer.next
 
 ```
 
