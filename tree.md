@@ -85,6 +85,24 @@ def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
         return True
     return False
 
+
+def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
+    if not s and not t:
+        return True
+    if not s or not t:
+        return False
+    return self.helper(s, t) or self.isSubtree(s.left, t) or \
+        self.isSubtree(s.right, t)
+
+
+def helper(self, s, t):
+    if not s and not t:
+        return True
+    if not (s and t):
+        return False
+    return s.val == t.val and self.helper(s.left, t.left) and \
+        self.helper(s.right, t.right)
+
 ```
 
 ## Kth Smallest Element In a BST
