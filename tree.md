@@ -1,16 +1,7 @@
 # Tree
 
-+ [Binary Tree Inorder Traversal](#binary-tree-inorder-traversal)
-+ [Symmetric Tree](#symmetric-tree)
-+ [Maximum Depth Of Binary Tree](#maximum-depth-of-binary-tree)
-+ [Same Tree](#same-tree)
-+ [Invert Binary Tree](#invert-binary-tree)
-+ [Path Sum](#path-sum)
-+ [Binary Tree Level Order Traversal](#binary-tree-level-order-traversal)
-+ [Subtree Of Another Tree](#subtree-of-another-tree)
-+ [Kth Smallest Element In a BST](#kth-smallest-element-in-a-bst)
-+ [Validate Binary Search Tree](#validate-binary-search-tree)
 + [Binary Search Tree Iterator](#binary-search-tree-iterator)
+
 
 ## Binary Tree Inorder Traversal
 
@@ -234,5 +225,23 @@ def isValidBST(self, root: TreeNode) -> bool:
 https://leetcode.com/problems/binary-search-tree-iterator/
 
 ```python
+class BSTIterator:
+    def __init__(self, root: TreeNode):
+        self.stack = []
+        while root:
+            self.stack.append(root)
+            root = root.left
+
+    def next(self) -> int:
+        next = self.stack.pop()
+        if next:
+            current = next.right
+            while current:
+                self.stack.append(current)
+                current = current.left
+        return next.val
+    
+    def hasNext(self) -> bool:
+        return len(self.stack) > 0
 
 ```
