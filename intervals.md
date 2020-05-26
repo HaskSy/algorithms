@@ -9,6 +9,7 @@
 https://leetcode.com/problems/insert-interval/
 
 ```python
+# first solution
 def insert(self, intervals, newInterval):
     """
     :type intervals: List[List[int]]
@@ -30,6 +31,7 @@ def insert(self, intervals, newInterval):
     return left + [middle] + right
 
 
+# second solution
 def insert(self, intervals, newInterval):
     """
     :type intervals: List[List[int]]
