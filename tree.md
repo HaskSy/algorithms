@@ -1,5 +1,15 @@
 # Tree
 
++ [Binary Tree Inorder Traversal](#binary-tree-inorder-traversal)
++ [Symmetric Tree](#symmetric-tree)
++ [Maximum Depth Of Binary Tree](#maximum-depth-of-binary-tree)
++ [Same Tree](#same-tree)
++ [Invert Binary Tree](#invert-binary-tree)
++ [Path Sum](#path-sum)
++ [Binary Tree Level Order Traversal](#binary-tree-level-order-traversal)
++ [Subtree Of Another Tree](#subtree-of-another-tree)
++ [Kth Smallest Element In a BST](#kth-smallest-element-in-a-bst)
++ [Validate Binary Search Tree](#validate-binary-search-tree)
 + [Binary Search Tree Iterator](#binary-search-tree-iterator)
 
 
