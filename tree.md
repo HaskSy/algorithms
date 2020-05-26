@@ -196,6 +196,36 @@ def kthSmallest(self, root: TreeNode, k: int) -> int:
 https://leetcode.com/problems/validate-binary-search-tree/
 
 ```python
+def isValidBST(self, root: TreeNode) -> bool:
+    stack = []
+    data = float('-inf')
+    while stack or root:
+        while root:
+            stack.append(root)
+            root = root.left
+        root = stack.pop()
+        if root.val <= data:
+            return False
+        data = root.val
+        root = root.right
+    return True
+
+
+def helper(self, root, left=float('-inf'), right=float('inf')):
+    """
+    :type root: TreeNode
+    :rtype: bool
+    """
+    if root is None:
+        return True
+    if not left < root.val < right:
+        return False
+    return self.helper(root.left, left, root.val) and \
+        self.helper(root.right, root.val, right)
+
+
+def isValidBST(self, root: TreeNode) -> bool:
+    return self.helper(root)
 
 ```
 
