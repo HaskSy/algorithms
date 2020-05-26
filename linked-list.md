@@ -47,6 +47,7 @@ def middleNode(self, head: ListNode) -> ListNode:
 https://leetcode.com/problems/palindrome-linked-list/
 
 ```python
+# first solution
 def isPalindrome(self, head: ListNode) -> bool:
     xs = []
     while head:
@@ -54,6 +55,8 @@ def isPalindrome(self, head: ListNode) -> bool:
         head = head.next
     return xs == xs[::-1]
 
+
+# second solution
 def isPalindrome(self, head: ListNode) -> bool:
     reverse = None
     middle = end = head
