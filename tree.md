@@ -141,6 +141,7 @@ def levelOrder(self, root: TreeNode) -> List[List[int]]:
 https://leetcode.com/problems/subtree-of-another-tree/
 
 ```python
+# first solution
 def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
     def tree_to_str(node):
         if not node:
@@ -154,6 +155,7 @@ def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
     return False
 
 
+# second solution
 def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
     if not s and not t:
         return True
