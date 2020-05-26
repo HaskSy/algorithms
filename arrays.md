@@ -9,6 +9,7 @@
 https://leetcode.com/problems/two-sum/
 
 ```python
+# first solution
 def twoSum(nums: List[int], target: int) -> List[int]:
     cache = {}
     for diff, value in enumerate(nums):
@@ -18,6 +19,7 @@ def twoSum(nums: List[int], target: int) -> List[int]:
             cache[value] = diff
 
 
+#second solution
 def twoSum(self, nums: List[int], target: int) -> List[int]:
     nums_copy = [(index, value) for index, value in enumerate(nums)]
     nums_copy.sort(key=lambda elem: elem[1])
